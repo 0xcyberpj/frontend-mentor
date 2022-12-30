@@ -4,217 +4,222 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
+  <!-- displays site properly based on user's device -->  
+  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Notifications page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     * {
-      padding: 0;
-      box-sizing: border-box;
-      margin: 0;
-    }
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+  }
 
-    @font-face {
-      font-family: f_medium;
-      src: url('assets/fonts/static/PlusJakartaSans-Medium.ttf');
-    }
+  @font-face {
+    font-family: f_medium;
+    src: url('assets/fonts/static/PlusJakartaSans-Medium.ttf');
+  }
 
-    @font-face {
-      font-family: f_bold;
-      src: url('assets/fonts/PlusJakartaSans-VariableFont_wght.ttf')
-    }
+  @font-face {
+    font-family: f_bold;
+    src: url('assets/fonts/PlusJakartaSans-VariableFont_wght.ttf')
+  }
 
-    @font-face {
-      font-family: f_bold_plus;
-      src: url('assets/fonts/static/PlusJakartaSans-ExtraBold.ttf')
-    }
+  @font-face {
+    font-family: f_bold_plus;
+    src: url('assets/fonts/static/PlusJakartaSans-ExtraBold.ttf')
+  }
 
-    body {
-      display: flex;
-      flex-direction: column;
-      font-family: plus;
+  body {
+    display: flex;
+    flex-direction: column;
+    font-family: plus;
 
-      border: 1px soldi black;
-      align-items: center;
-      background-color: rgba(211, 218, 218, 0.147);
-    }
+    border: 1px soldi black;
+    align-items: center;
+    background-color: rgba(211, 218, 218, 0.147);
+  }
 
-    main {
-      display: flex;
-      flex-direction: column;
+  main {
+    display: flex;
+    flex-direction: column;
 
-      flex-wrap: wrap;
-      width: 99%;
-      font-size: 0.9rem;
-      gap: 2rem;
-      padding: 0.5rem;
-      font-family: f_medium;
+    flex-wrap: wrap;
+    width: 99%;
+    font-size: 0.9rem;
+    gap: 2rem;
+    padding: 0.5rem;
+    font-family: f_medium;
 
-    }
-
-
-
-    header {
-      display: flex;
-      width: 100%;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      justify-content: space-around;
-      align-items: center;
-      padding: 1px;
-      text-transform: capitalize;
-
-    }
-
-    header h2 {
-      font-family: f_bold_plus;
-    }
-
-    img {
-      max-width: 8%;
-      margin-left: 2rem;
-      margin-right: 1.6rem;
-    }
-
-    .count {
-      background-color: rgb(10, 10, 125);
-      padding: 1px 7px 1px 7px;
-      border-radius: 6px;
-      color: white;
-      font-size: 1.1rem;
-      margin: 0 2px 0 8px;
-    }
-
-    .noti {
-      display: flex;
-      align-items: flex-start;
-      width: 100%;
-      display: inline-flex;
-      margin-bottom: 0.9rem;
-      border-radius: 10px;
-      background-color: rgba(117, 245, 245, 0.027);
-
-    }
+  }
 
 
 
-    .noti2 {
-      display: flex;
-      align-items: flex-start;
-      width: 100%;
-      display: inline-flex;
-      margin-bottom: 0.9rem;
-      border-radius: 10px;
+  header {
+    display: flex;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1px;
+    text-transform: capitalize;
 
-    }
+  }
 
-    .noti3 {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      display: inline-flex;
-      justify-content: space-between;
-      margin-bottom: 0.9rem;
-      border-radius: 10px;
+  header h2 {
+    font-family: f_bold_plus;
+  }
 
-    }
+  img {
+    max-width: 8%;
+    margin-left: 2rem;
+    margin-right: 1.6rem;
+  }
+
+  .count {
+    background-color: rgb(10, 10, 125);
+    padding: 1px 7px 1px 7px;
+    border-radius: 6px;
+    color: white;
+    font-size: 1.1rem;
+    margin: 0 2px 0 8px;
+  }
+
+  .noti {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    display: inline-flex;
+    margin-bottom: 0.9rem;
+    border-radius: 10px;
+    background-color: rgba(117, 245, 245, 0.027);
+
+  }
 
 
-    .name {
-      font-weight: 600;
-    }
 
-    .content_text {
-      font-weight: 500;
-      font-style: normal;
-      font-family: f_bold_plus;
-    }
+  .noti2 {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    display: inline-flex;
+    margin-bottom: 0.9rem;
+    border-radius: 10px;
 
-    .light_text {
-      font-weight: 100;
-      font-style: normal;
-      font-family: f_bold;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      line-height: 1.4rem;
+  }
 
-    }
+  .noti3 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    margin-bottom: 0.9rem;
+    border-radius: 10px;
+
+  }
+
+
+  .name {
+    font-weight: 600;
+  }
+
+  .content_text {
+    font-weight: 500;
+    font-style: normal;
+    font-family: f_bold_plus;
+  }
+
+  .light_text {
+    font-weight: 100;
+    font-style: normal;
+    font-family: f_bold;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.4rem;
+
+  }
 
 .gray{
-  color:gray;
+color:gray;
 }
 
 
 
-    .content_text_box {
-      display: block;
-      text-align: left;
-      border: 0.5px solid rgba(0, 0, 0, 0.346);
-      font-weight: 400;
-      font-family: f_bold;
-      padding: 20px;
-      font-style: normal;
-      max-width: 90%;
-      width: 80%;
-      border-radius: 0.4rem;
-      margin: 10px;
-      line-height: 1.1rem;
-      margin-top: 1.8rem;
-    }
+  .content_text_box {
+    display: block;
+    text-align: left;
+    border: 0.5px solid rgba(0, 0, 0, 0.346);
+    font-weight: 400;
+    font-family: f_bold;
+    padding: 20px;
+    font-style: normal;
+    max-width: 90%;
+    width: 80%;
+    border-radius: 0.4rem;
+    margin: 10px;
+    line-height: 1.1rem;
+    margin-top: 1.8rem;
+  }
 
-    .content_text_box:hover {
-      display: block;
-      text-align: left;
-      font-weight: 400;
-      font-family: f_bold;
-      padding: 20px;
-      cursor: pointer;
-      background-color: rgba(105, 241, 241, 0.152);
-      max-width: 90%;
-      width: 80%;
-      border-radius: 0.4rem;
-      margin: 10px;
-      line-height: 1.1rem;
-      margin-top: 1.8rem;
-      border: 0;
-      transition: 1s;
-    }
+  .content_text_box:hover {
+    display: block;
+    text-align: left;
+    font-weight: 400;
+    font-family: f_bold;
+    padding: 20px;
+    cursor: pointer;
+    background-color: rgba(105, 241, 241, 0.152);
+    max-width: 90%;
+    width: 80%;
+    border-radius: 0.4rem;
+    margin: 10px;
+    line-height: 1.1rem;
+    margin-top: 1.8rem;
+    border: 0;
+    transition: 1s;
+  }
 
-    .red_alert {
-      width: 9px;
-      background-color: rgba(245, 48, 48, 0.929);
-      height: 9px;
-      border-radius: 50%;
-      display: inline-flex;
-    }
+  .red_alert {
+    width: 9px;
+    background-color: rgba(245, 48, 48, 0.929);
+    height: 9px;
+    border-radius: 50%;
+    display: inline-flex;
+  }
+
+.attribution{
+  font-size: 0.9rem;
+}
+
 
 a{
-  color:black;
-  font-family: f_medium;
-  text-decoration:none;
-  font-weight: 900;
+color:black;
+font-family: f_medium;
+text-decoration:none;
+font-weight: 900;
 }
-    .blue {
-      color: blue;
-      font-family: f_bold_plus;
-    }
+  .blue {
+    color: blue;
+    font-family: f_bold_plus;
+  }
 
-    .p3 {
-      margin-top: 1rem;
-    }
-    .p4 span{
-      display: inline-block;
-    }
+  .p3 {
+    margin-top: 1rem;
+  }
+  .p4 span{
+    display: inline-block;
+  }
 
-    .p4 .another_image {
-      margin-left: auto;
-    }
+  .p4 .another_image {
+    margin-left: auto;
+  }
   </style>
 </head>
+
 
 <body>
 
@@ -289,7 +294,7 @@ a{
 
 
     
-    <div class="p1 noti">
+    <div class="p1 noti2">
       <img src="assets/images/avatar-nathan-peterson.webp" alt="">
       <p class="name">Nathan Peterson &nbsp; <i class="light_text"> reacted to your recent post </i> <i
           class="content_text">5 end-game strategies to increase your win rate </i>
@@ -299,7 +304,7 @@ a{
       </p> </div>
 
 
-    <div class="p1 noti">
+    <div class="p1 noti2">
       <img src="assets/images/avatar-anna-kim.webp" alt="">
       <p class="name">Anna Kim&nbsp; <i class="light_text"> left the group </i>
         <i class="content_text gray"> Chess Club</i>
