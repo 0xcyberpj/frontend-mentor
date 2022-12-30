@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Notifications page</title>
+  <script defer src="index.js"></script>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      padding: 0;
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    @font-face {
+      font-family: f_medium;
+      src: url('assets/fonts/static/PlusJakartaSans-Medium.ttf');
+    }
+
+    @font-face {
+      font-family: f_bold;
+      src: url('assets/fonts/PlusJakartaSans-VariableFont_wght.ttf')
+    }
+
+    @font-face {
+      font-family: f_bold_plus;
+      src: url('assets/fonts/static/PlusJakartaSans-ExtraBold.ttf')
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      font-family: plus;
+      width: 100%;
+      border: 1px soldi black;
+      align-items: center;
+      background-color: rgba(211, 218, 218, 0.147);
+    }
+
+    main {
+      cursor: pointer;
+      border-radius: 9px;
+      display: flex;
+      flex-direction: column;
+      padding: 0.8rem;
+      flex-wrap: wrap;
+      width: 70%;
+      font-size: 0.9rem;
+      gap: 2rem;
+      font-family: f_medium;
+      box-shadow: 4px 5px 14px rgba(128, 128, 128, 0.415);
+
+    }
+
+
+
+    header {
+      cursor: pointer;
+      display: flex;
+      width: 99%;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      justify-content: space-around;
+      align-items: center;
+      padding: 1px;
+      text-transform: capitalize;
+
+    }
+
+    header h2 {
+      font-family: f_bold_plus;
+    }
+
+    img {
+      max-width: 12%;
+      margin-left: 2rem;
+      margin-right: 1.6rem;
+    }
+
+    .count {
+      background-color: rgb(10, 10, 125);
+      padding: 1px 7px 1px 7px;
+      border-radius: 6px;
+      color: white;
+      font-size: 1.1rem;
+      margin: 0 2px 0 8px;
+    }
+
+    .noti {
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
+      display: inline-flex;
+      margin-bottom: 0.9rem;
+      border-radius: 10px;
+      background-color: rgba(117, 245, 245, 0.027);
+
+    }
+
+
+
+    .noti2 {
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
+      display: inline-flex;
+      margin-bottom: 0.9rem;
+      border-radius: 10px;
+
+    }
+
+    .noter {
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
+      margin-bottom: 0.9rem;
+      border-radius: 10px;
+      background-color: rgb(248, 248, 248);
+
+    }
+
+
+    .noti3 {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      display: inline-flex;
+      justify-content: space-between;
+      margin-bottom: 0.9rem;
+      border-radius: 10px;
+
+    }
+
+
+    .name {
+      font-weight: 600;
+    }
+
+    .content_text {
+      font-weight: 500;
+      font-style: normal;
+      font-family: f_bold_plus;
+    }
+
+    .light_text {
+      font-weight: 100;
+      font-style: normal;
+      font-family: f_bold;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      line-height: 1.4rem;
+
+    }
+
+    .gray {
+      color: gray;
+    }
+
+
+.readed{
+  font-weight: 200;
+  opacity: 20%;
+  font-family: f_bold;
+}
+
+    .content_text_box {
+      display: block;
+      text-align: left;
+      border: 0.5px solid rgba(0, 0, 0, 0.346);
+      font-weight: 400;
+      font-family: f_bold;
+      padding: 18px;
+      font-style: normal;
+      max-width: 90%;
+      width: 80%;
+      border-radius: 0.4rem;
+      margin: 10px;
+      line-height: 1.1rem;
+      margin-top: 1.8rem;
+    }
+
+    .content_text_box:hover {
+      display: block;
+      text-align: left;
+      font-weight: 400;
+      font-family: f_bold;
+      padding: 18px;
+      cursor: pointer;
+      background-color: rgba(105, 241, 241, 0.152);
+      max-width: 90%;
+      width: 80%;
+      border-radius: 0.4rem;
+      margin: 10px;
+      line-height: 1.1rem;
+      margin-top: 1.8rem;
+      border: 0;
+      transition: 0.7s;
+    }
+
+    .red_alert {
+      width: 9px;
+      background-color: rgba(245, 48, 48, 0.929);
+      height: 9px;
+      border-radius: 50%;
+      display: inline-flex;
+    }
+
+    .reader{
+      font-size:0.8rem;
+    }
+
+    a {
+      color: black;
+      font-family: f_medium;
+      text-decoration: none;
+      font-weight: 900;
+    }
+
+    .blue {
+      color: blue;
+      font-family: f_bold_plus;
+    }
+
+    .p3 {
+      margin-top: 1rem;
+    }
+
+    .p4 span {
+      display: inline-block;
+    }
+
+    .p4 .another_image {
+      margin-left: auto;
+    }
+
+
+    @media screen and (max-width:780px) {
+      body {
+        width: 100%;
+      }
+
+      main {
+        width: 100%;
+      }
+
+      .content_text_box {
+        width: 100%
+      }
+      .content_text_box:hover {
+        width: 100%
+      }
+
+
+      header {
+        width: 100%;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+
+  <header>
+    <h2>Notifications <span class="count">0</span></h2>
+    <p class="light_text read reader" onclick="varta()" >mark all as read</p>
+  </header>
+
+
+  <main>
+
+
+    <div class="notification">
+
+      <div class="p1 noti active">
+        <img src="assets/images/avatar-mark-webber.webp" alt="">
+        <p class="name">Mark webber &nbsp; <i class="light_text"> reacted to your recent post </i> <i
+            class="content_text">My first tournament today! </i><span class="red_alert"></span>
+          <br>
+          <span class="time"><i class="light_text">1 m ago</i> </span>
+
+        </p>
+      </div>
+
+
+
+      <div class="p1 noti active">
+        <img src="assets/images/avatar-angela-gray.webp" alt="">
+        <p class="name">Angela Gray &nbsp; <i class="light_text"> Followed You <span class="red_alert"></span>
+            <br>
+            <span class="time"><i class="light_text">5 m ago</i>
+            </span>
+        </p>
+      </div>
+
+
+
+      <div class="p1 noti active">
+        <img src="assets/images/avatar-jacob-thompson.webp" alt="">
+        <p class="name">Jacob Thompson &nbsp; <i class="light_text"> has joined your group </i> <i
+            class="content_text blue"> Chess club </i><span class="red_alert"></span>
+          <br>
+          <span class="time"><i class="light_text">1 day ago</i>
+          </span>
+        </p>
+      </div>
+
+      <div class="p3 p1 noti3">
+        <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="">
+        <p class="name p3">Rizky Hasanuddin &nbsp; <i class="light_text"> sent you a private message </i> <br>
+          <span class="time"><i class="light_text">5 days ago</i> </span>
+          <br>
+          <i class="content_text_box">
+            Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and
+            I'm already having lots of fun and improving my game.</i>
+          <br>
+        </p>
+      </div>
+
+
+
+      <div class="p4 p1 noti3">
+        <img src="assets/images/avatar-kimberly-smith.webp" alt="">
+
+        <p class="name">Kimberly Smith <i class="light_text">Commented on your picture &nbsp;</i>
+          <br>
+          <span class="time"> <i class="light_text"> 1 week ago</i> </span>
+        </p>
+
+        <img src="/assets/images/image-chess.webp" alt="" class="another_image">
+      </div>
+
+
+
+
+      <div class="p1 noti2">
+        <img src="assets/images/avatar-nathan-peterson.webp" alt="">
+        <p class="name">Nathan Peterson &nbsp; <i class="light_text"> reacted to your recent post </i> <i
+            class="content_text">5 end-game strategies to increase your win rate </i>
+          <br>
+          <span class="time"><i class="light_text">2 weeks ago</i>
+          </span>
+        </p>
+      </div>
+
+
+      <div class="p1 noti2">
+        <img src="assets/images/avatar-anna-kim.webp" alt="">
+        <p class="name">Anna Kim&nbsp; <i class="light_text"> left the group </i>
+          <i class="content_text gray"> Chess Club</i>
+          <br>
+          <span class="time"><i class="light_text">2 weeks ago</i>
+          </span>
+      </div>
+
+
+
+    </div>
+
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+    Coded by <a href="#"> P4UL </a>.
+  </div>
+</body>
+
+</html>
