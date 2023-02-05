@@ -31,13 +31,13 @@ body{
 padding: .9rem;
 display: grid;
 place-items: center;
-
 width: 100%;
 }
 
 img,.main__image{
     max-width: 100%;;
 }
+
 
 .main__image,img,.main__container,.main,.card,.avatar{
     border-radius: .8rem;
